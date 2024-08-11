@@ -1,23 +1,60 @@
-.textfisher1 {
+.first-text-one {
 	font-size: 50px;
 	margin-top: 50px;
 }
 
-.textfisher2 {
+.first-text-two {
 	font-size: 23px;
 	margin-top: 70px;
 }
 
+/* About us */
+
+.about-us-one {
+	font-size: 50px; 
+	margin-top: 20px; 
+	color: white;
+}
+
+.about-us-two {
+	font-size: 23px; 
+	margin-top: 40px; 
+	color: white; 
+	text-indent: 20px;
+}
+
+.about-us-tree {
+	font-size: 23px; 
+	color: white; 
+	text-indent: 20px;
+}
+
+.human-image{
+	position: relative; 
+	z-index: 1; 
+	max-width: 100%; 
+	margin-top: 30px;
+}
+
+.services {
+	font-size: 23px; 
+	margin-top: 20px;
+}
+
+/* FAQ */
+
 .FAQ {
 	margin-bottom: 100px;
 }
+
+/* Navbar */
 
 .colornav {
 	background-color: #e3212a;
 	margin-top: 20px;
    }
 
-.navbar_cc {
+.main-navbar {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
@@ -26,37 +63,32 @@
 	text-align: center;
 	}
 		
-.navbar_cc li {
+.main-navbar li {
 	margin-right: 80px; 
 	}
 		
-.navbar_cc li a {
+.main-navbar li a {
 	text-decoration: none; 
 	color: white; 
 	}
 		
-.navbar_cc li a:hover {
+.main-navbar li a:hover {
 	color: black;
 	}
 
-.navbarrr {
+.about-us-navbar {
 	width: 100%;
 	height: auto;
 	background-color: rgba(227,33,42,0.7);
 	}
 	
-.navbarrr .container {
+.about-us-navbar .container {
 	height: inherit;
 	display: flex;
 	flex-direction: column;
 	}
-	
-.navbarrra {
-	width: 100%;
-	height: 50px;
-	
-	}
 
+/* Media */
 
 @media (min-width: 768px) and (max-width: 1400px) {
     .row-reverse-md {
@@ -66,7 +98,54 @@
     }
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+    .center_media p {
+        text-align: center;
+		margin-top: 20px;
+		margin-bottom: 20px;
+    }
+}
 
+/* Frame image */
 
+.frame-image {
+	border: 7px solid black;
+	transition: border-color 0.1s ease-in-out;
+}
 
+.frame-image:hover {
+	border-color: #e3212a;
+}
 
+/* Animation */
+
+.element-photo-animation {
+    opacity: 0;
+    transform: translateY(-20px); /* Зміщення по вертикалі вгору */
+}
+
+.element-photo-animation.element-show {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateY(0%); /* Повернення в початкове положення */
+}
+
+.element-text-animation {
+    opacity: 0;
+    transform: translateY(-20px); /* Зміщення по вертикалі вгору */
+}
+
+.element-text-animation.element-show {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateY(0%); /* Повернення в початкове положення */
+}
+
+/* Main text */
+
+.main-text {
+	text-align: center; 
+	font-size: 50px; 
+	margin-bottom: 50px; 
+	margin-top: 50px;
+}
