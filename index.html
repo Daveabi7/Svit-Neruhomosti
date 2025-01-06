@@ -10,7 +10,26 @@
 </head>
 <body>
 
-<img class="d-block mx-auto" src="img/logo_main.png" width="400" draggable="false" alt="Logo" style="margin-top: 20px;">
+  <div class="container py-3">
+    <div class="row align-items-center">
+      <div class="col text-start">
+        <img src="img/logo_main_0.png" alt="Logo Left" width="400">
+      </div>
+      <div class="col text-center">
+        <img src="img/logo_main_3.png" alt="Logo Center" width="150">
+      </div>
+      <div class="col text-end">
+        <p class="mb-1">Сержа Лифаря, 5</p>
+        <p class="mb-1">(050) 489-51-51</p>
+        <p class="mb-0">(067) 247-51-51</p>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col text-center">
+        <p class="mb-0">Вся нерухомість Києва та передмістя</p>
+      </div>
+    </div>
+  </div>
 
 <nav class="navbar navbar-expand-xl colornav">
   <div class="container navbar">
@@ -23,24 +42,61 @@
           <li><a href="#services">Послуги з питань нерухомості</a></li>
           <li><a href="#adventages">Переваги</a></li>
           <li><a href="#contacts">Контакти</a></li>
-          <li><a href="#faq">FAQ</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-    <div class="container my-5">
-      <div class="row">
-          <div class="col-md-6" style="position: relative;">
-              <h3 class="first-text-one text-center element-text-animation">Світ нерухомості</h3>
-              <p class="first-text-two text-center element-text-animation">Понад 10 років досвіду на ринку нерухомості Києва. Професійні рієлтори, широкий спектр послуг і гарантія безпеки угод для вашого спокою і комфорту.</p>
-          </div>  
-  
-          <div class="col-md-6">
-              <img src="img/kyiv.jpeg" alt="Kyiv" class="img-fluid custom-image transform frame-image element-photo-animation" style="max-width: 100%;">
-          </div>
+  <h1 id="contacts" class="element-text-animation main-text"><strong>Контакти</strong></h1>
+
+  <nav>
+    <div class="container">
+      <div class="row align-items-center" id="contacts">
+        <!-- Контактна інформація -->
+        <div class="col-md-6 concon element-text-animation">
+          <h2><b>Адреса:</b>&nbsp;Сержа Лифаря, 5</h2>
+          <h2>
+            <b style="color: #e3212a;">Vodafone&nbsp;</b>
+            <img src="img/Vodafone.png" width="25" height="25" alt="Vodafone">
+            <b style="color: #e3212a;">&nbsp;:</b>&nbsp;(050) 489-51-51
+          </h2>
+          <h2>
+            <b style="color: rgb(32, 173, 227)">Київстар&nbsp;</b>
+            <img src="img/Kyivstar.png" width="25" height="25" alt="Kyivstar">
+            <b style="color: rgb(32, 173, 227)">&nbsp;:</b>&nbsp;(067) 247-51-51
+          </h2>
+          <h3>Зв'язатися з нами:</h3>
+          <form class="row g-3" action="submit_form.php" method="POST">
+            <div class="col-md-12">
+                <input class="form-control" type="text" name="name" placeholder="Ваше Ім'я" required>
+            </div>
+            <div class="col-md-12">
+                <input class="form-control" type="tel" name="phone" placeholder="Ваш Телефон" required>
+            </div>
+            <div class="col-md-12">
+                <input class="form-control" type="email" name="email" placeholder="Ваш Email" required>
+            </div>
+            <div class="col-md-12">
+                <textarea class="form-control" name="message" rows="4" placeholder="Ваше повідомлення" required></textarea>
+            </div>
+            <div class="col-md-12 text-end">
+                <button id="sendMessage" type="submit" class="btn btn-outline-secondary">Відправити</button>
+            </div>
+        </form>
+        </div>
+
+        <div class="col-md-6 element-photo-animation">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2537.26151210926!2d30.6147904!3d50.5107008!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce5102781b5b%3A0x2e04ac6389bcf0f1!2z0KHQstGW0YIg0L3QtdGA0YPRhdC-0LzQvtGB0YLRlg!5e0!3m2!1suk!2sua!4v1720622466293!5m2!1suk!2sua" 
+            width="100%" 
+            height="450" 
+            frameborder="0" 
+            style="border:0;" 
+            allowfullscreen="">
+          </iframe>
+        </div>
       </div>
-  </div>
+    </div>
+  </nav>
 
   <div class="about-us-navbar">
   <div class="container my-5">
@@ -151,147 +207,6 @@
       </div>
         
     </div>
-</div>
-
-<h1 id="contacts" class="element-text-animation main-text"><strong>Контакти</strong></h1>
-
-    <div class="container">
-        <div class="row" id="contacts">
-          <div class="col-md-6 element-photo-animation">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2537.26151210926!2d30.6147904!3d50.5107008!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce5102781b5b%3A0x2e04ac6389bcf0f1!2z0KHQstGW0YIg0L3QtdGA0YPRhdC-0LzQvtGB0YLRlg!5e0!3m2!1suk!2sua!4v1720622466293!5m2!1suk!2sua" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-          </div>
-          <div class="col-md-6 concon element-text-animation">
-            <h2><b>Адреса:</b>&nbsp;Сержа Лифаря, 5</h2>
-            <h2><b style="color: #e3212a;">Vodafone&nbsp;</b><img src="img/Vodafone.png" width="25" height="25" alt="Vodafone"><b style="color: #e3212a;">&nbsp;:</b>&nbsp;(050) 489-51-51</h2>
-            <h2><b style="color: rgb(32, 173, 227)">Київстар&nbsp;</b><img src="img/Kyivstar.png" width="25" height="25" alt="Kyivstar"><b style="color: rgb(32, 173, 227)">&nbsp;:</b>&nbsp;(067) 247-51-51</h2>
-            <h3>Зв'язатися з нами:</h3>
-            <div class="container">
-              <form class="row">
-            <input class="col-md-4" type="text" placeholder="Ваше Имя">
-            <input class="col-md-4" type="text" placeholder="Ваш Телефон">
-            <input class="col-md-4" type="text" placeholder="Ваш Email">
-            <textarea class="col-md-12" name="name" rows="8"></textarea>
-            <button type="button" class="btn btn-outline-secondary col-md-3 offset-md-9">Отправить</button>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <h1 id="faq" class="element-text-animation main-text"><strong>FAQ</strong></h1>
-
-<div class="container FAQ element-text-animation">
-  <div class="row">
-<div class="accordion accordion-flush" id="accordionFlushExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-        1. Які послуги надає агентство нерухомості "Світ нерухомості"?
-      </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Ми надаємо широкий спектр послуг, включаючи:</div>
-      <div class="accordion-body"><ul style="list-style-type:disc;">
-        <li>Покупка-продаж житлової та комерційної нерухомості</li>
-        <li>Юридичне супроводження угод</li>
-        <li>Допомога в покупці квартири в кредит</li>
-        <li>Безкоштовні консультаційні послуги</li>
-        <li>Оцінка житлової нерухомості</li>
-        <li>Безкоштовна реклама ваших об'єктів</li>
-      </ul></div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        2. Як довго ви працюєте на ринку нерухомості?
-      </button>
-    </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Наше агентство працює на ринку нерухомості вже понад 10 років, накопичуючи значний досвід і знання у цій сфері.</div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-        3. Де знаходяться ваші офіси?
-      </button>
-    </h2>
-    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Наш офіс розташований за адресою: м. Київ, вул. Сержа Лифаря, 5.</div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-        4. Чи є у вас кваліфіковані рієлтори?
-      </button>
-    </h2>
-    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Так, наші рієлтори мають кваліфікаційні сертифікати від союзу спеціалістів з нерухомого майна України і великий досвід роботи.</div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-        5. Чи надаєте ви юридичне супроводження угод?
-      </button>
-    </h2>
-    <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Так, ми забезпечуємо повне юридичне супроводження угод, включаючи перевірку документів, підготовку договорів і реєстрацію права власності.</div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-        6. Як можна отримати консультацію?
-      </button>
-    </h2>
-    <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Ви можете отримати безкоштовну консультацію, звернувшись до нас за телефонами, вказаними на сайті, або завітавши до одного з наших офісів.</div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
-        7. Чи допомагаєте ви з покупкою нерухомості в кредит?
-      </button>
-    </h2>
-    <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Так, наші спеціалісти допоможуть вам отримати кредит на покупку нерухомості на найвигідніших умовах.</div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
-        8. Які гарантії безпеки угод ви надаєте?
-      </button>
-    </h2>
-    <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Ми гарантуємо безпеку угод завдяки комплексній перевірці документів, юридичному супроводу та конфіденційності.</div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
-        9. Чи надаєте ви послуги з оцінки нерухомості?
-      </button>
-    </h2>
-    <div id="flush-collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Так, ми надаємо послуги з оцінки житлової нерухомості, щоб ви знали справжню вартість свого майна.</div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTeen" aria-expanded="false" aria-controls="flush-collapseTeen">
-        10. Як розмістити оголошення про продаж нерухомості на вашому сайті?
-      </button>
-    </h2>
-    <div id="flush-collapseTeen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Ви можете звернутися до нашого агентства, і ми безкоштовно розмістимо оголошення про продаж вашого об'єкта нерухомості на нашому сайті.</div>
-    </div>
-  </div>
-</div>
-  </div>
 </div>
 
     <footer class="border-top">
