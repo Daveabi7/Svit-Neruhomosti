@@ -8,6 +8,26 @@
 	margin-top: 70px;
 }
 
+/* Вся нерухомість */
+
+.container .row.align-items-center .col img {
+    max-width: 100%;
+    height: auto;
+	margin-top: 25px;
+}
+
+.container .row .col p {
+    font-size: 25px;
+    line-height: 1.5;
+    margin: 0;
+	font-weight: bold;
+}
+
+.container .row.mt-3 p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
 /* About us */
 
 .about-us-one {
@@ -59,7 +79,7 @@
 	padding: 0;
 	margin: 0;
 	font-size: 23px;
-	margin-left: 140px;
+	margin-left: 240px;
 	text-align: center;
 	}
 		
