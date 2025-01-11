@@ -9,11 +9,10 @@
 }
 
 /* Вся нерухомість */
-
 .container .row.align-items-center .col img {
     max-width: 100%;
     height: auto;
-	margin-top: 25px;
+    margin-top: 25px;
 }
 
 .container .row .col p {
@@ -123,6 +122,14 @@
         text-align: center;
 		margin-top: 20px;
 		margin-bottom: 20px;
+    }
+}
+
+/* Виправлений медіазапит */
+@media (max-width: 767px) {
+    .container .row.align-items-center .col.text-end p {
+        font-size: 18px;
+        white-space: nowrap;
     }
 }
 
