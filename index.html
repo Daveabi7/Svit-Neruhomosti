@@ -52,38 +52,36 @@
   <nav>
     <div class="container">
       <div class="row align-items-center" id="contacts">
-        <!-- Контактна інформація -->
-        <div class="col-md-6 concon element-text-animation">
-          <h2><b>Адреса:</b>&nbsp;Сержа Лифаря, 5</h2>
-          <h2>
-            <b style="color: #e3212a;">Vodafone&nbsp;</b>
-            <img src="img/Vodafone.png" width="25" height="25" alt="Vodafone">
-            <b style="color: #e3212a;">&nbsp;:</b>&nbsp;(050) 489-51-51
-          </h2>
-          <h2>
-            <b style="color: rgb(32, 173, 227)">Київстар&nbsp;</b>
-            <img src="img/Kyivstar.png" width="25" height="25" alt="Kyivstar">
-            <b style="color: rgb(32, 173, 227)">&nbsp;:</b>&nbsp;(067) 247-51-51
-          </h2>
-          <h3>Зв'язатися з нами:</h3>
-          <form class="row g-3" action="submit_form.php" method="POST">
-            <div class="col-md-12">
-                <input class="form-control" type="text" name="name" placeholder="Ваше Ім'я" required>
-            </div>
-            <div class="col-md-12">
-                <input class="form-control" type="tel" name="phone" placeholder="Ваш Телефон" required>
-            </div>
-            <div class="col-md-12">
-                <input class="form-control" type="email" name="email" placeholder="Ваш Email" required>
-            </div>
-            <div class="col-md-12">
-                <textarea class="form-control" name="message" rows="4" placeholder="Ваше повідомлення" required></textarea>
-            </div>
-            <div class="col-md-12 text-end">
-                <button id="sendMessage" type="submit" class="btn btn-outline-secondary">Відправити</button>
-            </div>
-        </form>
-        </div>
+          <!-- Контактна інформація -->
+          <div class="col-md-6 concon element-text-animation">
+              <h2><b>Адреса:</b>&nbsp;Сержа Лифаря, 5</h2>
+              <h2>
+                  <b style="color: #e3212a;">Vodafone&nbsp;</b>
+                  <b style="color: #e3212a;">&nbsp;:</b>&nbsp;(050) 489-51-51
+              </h2>
+              <h2>
+                  <b style="color: rgb(32, 173, 227)">Київстар&nbsp;</b>
+                  <b style="color: rgb(32, 173, 227)">&nbsp;:</b>&nbsp;(067) 247-51-51
+              </h2>
+              <h3>Зв'язатися з нами:</h3>
+              <form class="row g-3" id="contactForm">
+                  <div class="col-md-12">
+                      <input class="form-control" type="text" name="name" placeholder="Ваше Ім'я" required>
+                  </div>
+                  <div class="col-md-12">
+                      <input class="form-control" type="tel" name="phone" placeholder="Ваш Телефон" required>
+                  </div>
+                  <div class="col-md-12">
+                      <input class="form-control" type="email" name="email" placeholder="Ваш Email" required>
+                  </div>
+                  <div class="col-md-12">
+                      <textarea class="form-control" name="messageperson" rows="4" placeholder="Ваше повідомлення" required></textarea>
+                  </div>
+                  <div class="col-md-12 text-end">
+                      <button id="sendMessage" type="submit" class="btn btn-outline-secondary">Відправити</button>
+                  </div>
+              </form>
+          </div>
 
         <div class="col-md-6 element-photo-animation">
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2537.26151210926!2d30.6147904!3d50.5107008!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce5102781b5b%3A0x2e04ac6389bcf0f1!2z0KHQstGW0YIg0L3QtdGA0YPRhdC-0LzQvtGB0YLRlg!5e0!3m2!1suk!2sua!4v1720622466293!5m2!1suk!2sua" 
@@ -240,5 +238,6 @@
       </footer>
 
 </body>
-<script src='js/core.js'></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="js/core.js"></script>
 </html>
