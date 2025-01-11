@@ -1,31 +1,51 @@
 <?php
-// Перевірка, чи надійшли дані через POST
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Отримання даних з форми
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $name = htmlspecialchars(trim($_POST['name']));
     $phone = htmlspecialchars(trim($_POST['phone']));
     $email = htmlspecialchars(trim($_POST['email']));
-    $message = htmlspecialchars(trim($_POST['message']));
+    $message = htmlspecialchars(trim($_POST['messageperson']));
 
-    // Перевірка заповненості полів
-    if (empty($name) || empty($phone) || empty($email) || empty($message)) {
-        echo "Будь ласка, заповніть усі поля.";
-        exit;
-    }
+    $mail = new PHPMailer(true);
 
-    // Формування листа
-    $to = "baskoills@gmail.com"; // Змініть на потрібний email
-    $subject = "Нове повідомлення з форми зворотного зв'язку";
-    $body = "Ім'я: $name\nТелефон: $phone\nEmail: $email\nПовідомлення:\n$message";
-    $headers = "From: $email";
+    try {
+        // Налаштування SMTP
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com'; // Змініть на ваш SMTP-сервер
+        $mail->SMTPAuth = true;
+        $mail->Username = 'baskoills@gmail.com'; // Ваш email
+        $mail->Password = 'gcio gmvo upnr ovse'; // Ваш пароль
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
 
-    // Надсилання листа
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Дякуємо! Ваше повідомлення надіслано.";
-    } else {
-        echo "Виникла помилка під час відправки. Спробуйте пізніше.";
+        $mail->CharSet = 'UTF-8';
+
+        // Налаштування листа
+        $mail->setFrom('baskoills@gmail.com', 'Світ нерухомості');
+        $mail->addAddress('baskoills@gmail.com'); // Куди відправляти
+
+        $mail->isHTML(true);
+        $mail->Subject = "Новий запит із сайту";
+        $mail->Body = "
+            <h1>Новий запит:</h1>
+            <p><strong>Ім'я:</strong> $name</p>
+            <p><strong>Телефон:</strong> $phone</p>
+            <p><strong>Email:</strong> $email</p>
+            <p><strong>Повідомлення:</strong> $message</p>
+        ";
+
+        $mail->send();
+        echo json_encode(["status" => "success", "message" => "Повідомлення відправлено!"]);
+    } catch (Exception $e) {
+        echo json_encode(["status" => "error", "message" => "Не вдалося відправити повідомлення. Помилка: {$mail->ErrorInfo}"]);
     }
 } else {
-    echo "Неправильний метод запиту.";
+    echo json_encode(["status" => "error", "message" => "Невірний запит."]);
 }
 ?>
